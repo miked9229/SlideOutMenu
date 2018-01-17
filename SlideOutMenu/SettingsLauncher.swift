@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class SettingsLauncher {
+class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let blackView = UIView()
+
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -20,6 +21,7 @@ class SettingsLauncher {
         return cv
         
     }()
+    let cellid = "cellid"
     
     
     @objc public func showSettings() { 
@@ -55,6 +57,13 @@ class SettingsLauncher {
         }
         
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath)
+        return cell
+    }
     
     @objc public func handleDismiss() {
         UIView.animate(withDuration: 0.5) {
@@ -64,9 +73,12 @@ class SettingsLauncher {
                 self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: window.frame.height), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
                 
             }
-            
-       
         }
-        
     }
+    override init() {
+        super.init()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+
 }
