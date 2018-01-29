@@ -10,6 +10,7 @@
 		000AE148325B47724428442D /* Pods_SlideOutMenuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF26219B7BF0D868DC856C93 /* Pods_SlideOutMenuUITests.framework */; };
 		4D31F60561B6AF980E6081C3 /* Pods_SlideOutMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744952BEA1AA4AB1C80F82CC /* Pods_SlideOutMenuTests.framework */; };
 		62AB796E72074C58F6CEF429 /* Pods_SlideOutMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB16B329DB2902A4EDFCB2D /* Pods_SlideOutMenu.framework */; };
+		9246420D201EA6350064B42A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9246420C201EA6350064B42A /* Extensions.swift */; };
 		925240BC20005CA600BAF143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240BB20005CA600BAF143 /* AppDelegate.swift */; };
 		925240BE20005CA600BAF143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240BD20005CA600BAF143 /* ViewController.swift */; };
 		925240C120005CA600BAF143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925240BF20005CA600BAF143 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		925240D120005CA700BAF143 /* SlideOutMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240D020005CA700BAF143 /* SlideOutMenuTests.swift */; };
 		925240DC20005CA700BAF143 /* SlideOutMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240DB20005CA700BAF143 /* SlideOutMenuUITests.swift */; };
 		925240EA200C4B3900BAF143 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240E9200C4B3900BAF143 /* SettingsLauncher.swift */; };
+		925240EC201A11F400BAF143 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240EB201A11F400BAF143 /* SettingCell.swift */; };
+		925240EE201A135D00BAF143 /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925240ED201A135D00BAF143 /* CustomCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 		7B2A5D347A590A31AF70715A /* Pods-SlideOutMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideOutMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideOutMenu/Pods-SlideOutMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		7DB16B329DB2902A4EDFCB2D /* Pods_SlideOutMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideOutMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C184373F88D6DECEF7702AC /* Pods-SlideOutMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideOutMenuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideOutMenuTests/Pods-SlideOutMenuTests.release.xcconfig"; sourceTree = "<group>"; };
+		9246420C201EA6350064B42A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		925240B820005CA600BAF143 /* SlideOutMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideOutMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925240BB20005CA600BAF143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925240BD20005CA600BAF143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		925240DB20005CA700BAF143 /* SlideOutMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuUITests.swift; sourceTree = "<group>"; };
 		925240DD20005CA700BAF143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		925240E9200C4B3900BAF143 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
+		925240EB201A11F400BAF143 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		925240ED201A135D00BAF143 /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
 		DF26219B7BF0D868DC856C93 /* Pods_SlideOutMenuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlideOutMenuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21E865335E27559C5B951AF /* Pods-SlideOutMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideOutMenuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideOutMenuTests/Pods-SlideOutMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,9 @@
 				925240C420005CA600BAF143 /* LaunchScreen.storyboard */,
 				925240C720005CA600BAF143 /* Info.plist */,
 				925240E9200C4B3900BAF143 /* SettingsLauncher.swift */,
+				925240EB201A11F400BAF143 /* SettingCell.swift */,
+				925240ED201A135D00BAF143 /* CustomCells.swift */,
+				9246420C201EA6350064B42A /* Extensions.swift */,
 			);
 			path = SlideOutMenu;
 			sourceTree = "<group>";
@@ -462,7 +471,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				925240BE20005CA600BAF143 /* ViewController.swift in Sources */,
+				9246420D201EA6350064B42A /* Extensions.swift in Sources */,
 				925240BC20005CA600BAF143 /* AppDelegate.swift in Sources */,
+				925240EE201A135D00BAF143 /* CustomCells.swift in Sources */,
+				925240EC201A11F400BAF143 /* SettingCell.swift in Sources */,
 				925240EA200C4B3900BAF143 /* SettingsLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
