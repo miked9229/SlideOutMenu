@@ -26,7 +26,7 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor(r: 232, g: 236, b: 241)
+        cv.backgroundColor = .white
         return cv
         
     }()
@@ -44,7 +44,7 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
         
         if let window = UIApplication.shared.keyWindow {
             
-            let height: CGFloat = 200
+            let height: CGFloat = CGFloat(settings.count) * cellHeight
             let y = window.frame.height - height
             
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
@@ -67,10 +67,8 @@ class SettingsLauncher: NSObject, UICollectionViewDelegate, UICollectionViewData
                 self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: y), size: CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height))
                 
             }, completion: nil)
-            
-            
-
-        }
+             
+        } 
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

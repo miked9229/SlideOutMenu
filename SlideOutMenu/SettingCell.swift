@@ -11,12 +11,26 @@ import LBTAComponents
 
 class SettingCell: BaseCell {
     
+    override var isHighlighted: Bool {
+        didSet {
+            
+            backgroundColor = isHighlighted ? .darkGray : .white
+            
+            nameLabel.textColor = isHighlighted ? .white : .black
+            
+            iconImageView.tintColor = isHighlighted ? .white : .gray
+            
+            
+        }
+    }
+    
+    
     var setting: Setting? {
         didSet {
             nameLabel.text = setting?.name
             
             if let imageName = setting?.imageName {
-                iconImageView.image = UIImage(named: imageName)
+                iconImageView.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
             }
             
         }
@@ -24,6 +38,7 @@ class SettingCell: BaseCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         label.text = "Setting"
         label.font = UIFont.systemFont(ofSize: 13)
         return label
@@ -31,6 +46,7 @@ class SettingCell: BaseCell {
     
     let iconImageView: UIImageView = {
        let imageView = UIImageView()
+        imageView.tintColor = .gray
        imageView.image = UIImage(named: "settings")
        imageView.contentMode = .scaleAspectFill
         return imageView
